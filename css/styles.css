@@ -6,6 +6,7 @@
   --active-link-color: #404bbf;
   --second-background-color: #f4f4fd;
   --light-color-text-logo: #e7e9fc;
+  --borders-customer-images: #8E8F99;
 }
 
 body {
@@ -31,8 +32,6 @@ h1, h2, h3, p, ul {
   width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 1px solid tomato;
-  background-color: greenyellow; */
 }
 
 .header {
@@ -114,15 +113,30 @@ h1, h2, h3, p, ul {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--active-link-color);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .hero {
   padding-top: 188px;
   padding-bottom: 188px;
-
   text-align: center;
-  background-color: var(--title-text-color);
-}
+
+  height: 600px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  background-image: linear-gradient(
+    90deg,
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  ),
+  url(../images/hero-photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+    }
 
 .hero-title {
   max-width: 496px;
@@ -172,9 +186,44 @@ h1, h2, h3, p, ul {
   margin-right: 24px;
 }
 
+.benefits-icon {
+  width: 264px;
+  height: 112px;
+}
+
+.benefits-item {
+  margin-bottom: 8px;
+}
+
+
+/* .benefits-list .item::before {
+  display: block;
+  content: '';
+  height: 112px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.benefits-icon-1::before {
+  background-image: url(../images/benefits1.svg);
+}
+
+.benefits-icon-2::before {
+  background-image: url(../images/benefits2.svg);
+}
+
+.benefits-icon-3::before {
+  background-image: url(../images/benefits3.svg);
+}
+
+.benefits-icon-4::before {
+  background-image: url(../images/benefits4.svg);
+}
+
 .benefits-list .item:last-child {
   margin-right: 0;
-}
+} */
 
 
 .title {
@@ -236,6 +285,14 @@ h1, h2, h3, p, ul {
 .container-team .item {
   width: calc((100% - 72px) / 4);
   margin-right: 24px;
+  
+}
+
+.container-team > .item {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  
+ border-radius: 0px 0px 4px 4px;
+  
 }
 
 .container-team .item:last-child {
@@ -247,7 +304,6 @@ h1, h2, h3, p, ul {
   padding-bottom: 120px;
 
   background-color: var(--second-background-color);
-  border-radius: 0px 0px 4px 4px;
 }
 
 .team-text {
@@ -255,8 +311,64 @@ h1, h2, h3, p, ul {
  padding-bottom: 32px;
 
  background-color: var(--white-text-color);
- text-align: center;
+ text-align: center; 
 }
+
+.team-text .text {
+  margin-bottom: 8px;
+}
+
+.team-social-links {
+  width: 40px;
+  height: 40px;
+  fill: var(--main-logo-color);
+}
+
+.team-links {
+  display: flex;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.team-links .item {
+  width: calc((100% - 72px) / 4);
+  margin-right: 24px;
+}
+
+.team-links .item:last-child {
+  margin-right: 0;
+}
+
+
+
+.customers-title {
+  padding-top: 130px;
+  padding-bottom: 72px;
+}
+
+.customers-link {
+  display: flex;
+  padding-bottom: 120px;
+}
+
+.customers-logo {
+  max-width: 168px;
+  height: 88px;
+  border: 1px solid var(--borders-customer-images);
+  border-radius: 5px;
+}
+
+.customers-link .item {
+  width: calc((100% - 120px) / 6);
+  margin-right: 24px;
+}
+
+.customers-link .item:last-child {
+  margin-right: 0;
+}
+
+
+
 
 .footer {
   padding-top: 100px;
@@ -268,6 +380,7 @@ h1, h2, h3, p, ul {
 
 .container-footer {
   max-width: 264px;
+  /* padding-right: 120px; */
 }
 
 .logo-footer {
@@ -281,7 +394,43 @@ h1, h2, h3, p, ul {
   margin-top: 16px;
 }
 
-/* Портфоліо */
+.main-container-footer {
+  display: flex;
+}
+
+.social-footer {
+  box-sizing: content-box;
+  width: 208px;
+  margin-left: 120px;
+}
+
+.social-footer p {
+  padding-bottom: 16px;
+}
+
+.footer-social-links {
+  width: 40px;
+  height: 40px;
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-links .item {
+  width: calc((100% - 72px) / 4);
+  margin-right: 24px;
+}
+
+.footer-links .item:last-child {
+  margin-right: 0;
+}
+
+
+
+
+/* -----------------------------Портфоліо -------------------------*/
 
 .main-portfolio {
   padding-top: 96px;
@@ -356,4 +505,10 @@ h1, h2, h3, p, ul {
 
 .work-list .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.work-list .item:hover,
+.work-list .item:focus {
+  border: 1px solid var(--second-background-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
